@@ -129,7 +129,7 @@ body{
 
 <section class="user-profile">
     <div class="avatar" role="img" aria-label="User avatar"></div>
-    <h1 class="username">@nickname</h1>
+    <h1 class="username" id="username">@nickname</h1>
   <div class="stats-container">
     <div class="stats-item">
       <span class="stats-icon" aria-hidden="true">💬</span>
@@ -145,6 +145,10 @@ body{
   </footer>
 </section>
 <script>
+    let tg = window.Telegram,WebApp;
+    let usname = document.getElementById("username");
+    usname.innerText = ${tg.initDataUnsafe.user.username};
+    
     function sleep(milliseconds) {
       const date = Date.now();
       let currentDate = null;
