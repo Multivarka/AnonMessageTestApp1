@@ -147,8 +147,8 @@ body{
 <script>
     let tg = window.Telegram,WebApp;
     let usname = document.getElementById("username");
-    usname.innerText = ${tg.initDataUnsafe.user.username};
-    
+    usname.innerText = `${tg.initDataUnsafe.user.username}`;
+
     function sleep(milliseconds) {
       const date = Date.now();
       let currentDate = null;
